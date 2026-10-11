@@ -1,0 +1,67 @@
+[plugin]
+enabled = true
+config_version = "0.1.0"
+log_level = "INFO"
+
+[timer]
+default_delay_seconds = 300
+min_delay_seconds = 10
+max_delay_seconds = 86400
+check_interval_seconds = 1.0
+allowed_modes = [
+    "relative",
+    "absolute",
+    "interval",
+    "chain",
+]
+
+[trigger_check]
+enable_cooling_check = true
+cancel_threshold_seconds = 30
+min_interval_seconds = 60
+enable_activity_check = false
+activity_max_messages = 10
+activity_action = "postpone"
+enable_frequency_limit = false
+frequency_limit_count = 5
+frequency_window_seconds = 3600
+frequency_action = "drop_silent"
+allow_high_priority_bypass = true
+
+[cancel]
+send_message = true
+message_cooling = "❌ [计划取消] 定时任务已取消：您刚刚进行过操作（距上次操作仅 {delta} 秒），本次计划「{note}」不再执行。"
+message_activity = "❌ [计划取消] 定时任务已取消：当前会话活跃，本次计划「{note}」不再执行。"
+message_frequency = "❌ [计划取消] 定时任务已取消：达到触发频率上限，本次计划「{note}」不再执行。"
+message_generic = "❌ [计划取消] 定时任务已取消（{reason}），计划：「{note}」。"
+
+[postpone]
+send_message = true
+postpone_delay_seconds = 60
+max_retries = 3
+message_cooling = "⏳ [计划推迟] 定时任务已推迟：您刚刚操作过（{delta} 秒前），将在 {postpone_seconds} 秒后重试。计划：「{note}」（推迟 {postpone_count}/{max_retries} 次）"
+message_activity = "⏳ [计划推迟] 定时任务已推迟：当前会话活跃，将在 {postpone_seconds} 秒后重试。计划：「{note}」"
+message_generic = "⏳ [计划推迟] 定时任务已推迟（{reason}），将在 {postpone_seconds} 秒后重试。计划：「{note}」"
+
+[limits]
+max_active_per_stream = 10
+max_active_total = 50
+stale_timeout_seconds = 7200
+cleanup_interval_seconds = 300
+allow_duplicate_notes = false
+auto_cleanup_on_trigger = true
+
+[messages]
+triggered = "⏰ [计划任务] 提醒：{note}"
+triggered_high_priority = "⚡ [计划任务 高优] 提醒：{note}"
+triggered_interval = "⏰ [周期任务 第{n}次] 提醒：{note}"
+cleared_all = "🗑️ [计划清除] 已取消所有定时任务（共 {count} 个）。"
+cleared_stream = "🗑️ [计划清除] 已取消本会话的定时任务（共 {count} 个）。"
+schedule_success = "✅ [计划已排期] {mode}模式，{trigger_time_desc}。计划：「{note}」"
+schedule_rejected = "❌ [排期失败] {reason}"
+
+[debug]
+verbose_logging = false
+dump_task_queue = false
+dump_interval_seconds = 60
+trace_all_decisions = false
