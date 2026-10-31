@@ -589,7 +589,7 @@ class SchedulerEngine:
 
         # 删除任务
         task.status = TASK_CANCELLED
-        del self._tasks[task.task_id]
+        self._tasks.pop(task.task_id, None)
         stream_ids = self._tasks_by_stream.get(task.stream_id, [])
         if task.task_id in stream_ids:
             stream_ids.remove(task.task_id)
