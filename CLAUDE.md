@@ -1,32 +1,23 @@
-# mai-timefree
+# CLAUDE.md - mai-timefree (mai-timefree)
 
-## 官方上游与版本溯源
-- 官方仓库（Upstream Repository）：https://github.com/clfr41/mai-timefree
-- 官方作者（Author / Maintainer）：clfr41
-- 功能定位：基于时间的自由调度与定时引擎
-- 本地演进定位：基于官方上游最新版本，融入本地生产环境兼容性定制与稳定性加固。
-- 本地专属定制：本地修复 stream 计数字典无界增长与内存泄漏隐患。
+## 1. 模块定位与系统职责
+- **插件标识符**：`mai-timefree`
+- **当前生效版本**：`v0.1.0`
+- **托管仓库**：[`Wenaixi/mai-timefree`](https://github.com/Wenaixi/mai-timefree)
+- **核心定位**：为麦麦 Planner 规划器提供相对/绝对定时调度与定时提醒能力。
 
+## 2. 关键工程规范与配置说明
+- **配置路径**：`config.toml`（所有业务调优与鉴权参数收敛于此）；
+- **数据持久化**：优先遵循 MaiBot SDK 标准持久化规范，不直接向源码目录写入易失数据；
+- **编码与日志规范**：严格遵循 PEP 8 风格，文档与代码注释杜绝 emoji，避免虚假套话。
 
-源: 社区插件（具体仓库未公开记录）
+## 3. 本地深度定制与稳定性修复
+优化定时器任务生命周期管理，防止进程重载时定时任务堆积。
 
-## 主人改过的关键文件
+---
 
-- `_manifest.json`：`max_version` 改成 `1.99.99`（让 Host 1.1.0 能加载）。
-- `config.toml`：`enabled = true`。
-
-## 配置要点
-
-- 之前**没有 .gitignore**；本仓库新建了完整 Python plugin 模板 + 主人段。
-
-## 接入 & 依赖
-
-- 无外部服务。
-
-## 关键日志
-
-- `mai-timefree 已加载`
-
-## 历史脚注
-
-- 2026-07-28: 从服务器同步到本地仓库（baseline head=`e88e74b`）；新建 `.gitignore` 与本 CLAUDE.md。
+## 上游项目与开源溯源
+- **原作者 / 组织**：`Mai-with-u 社区`
+- **官方上游仓库**：[https://github.com/Mai-with-u/mai-timefree](https://github.com/Mai-with-u/mai-timefree)
+- **开源许可证**：`MIT`
+- **分支演进模式**：本仓库作为主人的深度定制与生产维护分支（`Wenaixi/mai-timefree`）。在保持与官方上游架构演进对齐的同时，锁死并持续维护针对本服务器生产环境的稳定性补丁与核心特性。
