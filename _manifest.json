@@ -4,7 +4,10 @@
   "version": "0.1.0",
   "name": "麦麦规划器延时提醒备忘闹钟",
   "description": "为 planner 提供定时调度能力，支持 relative/absolute/interval/chain 四种模式，多级触发前判定（冷却/活跃/频控），所有行为可配置(无限麦麦)。",
-  "author": "Wenaixi",
+  "author": {
+    "name": "Wenaixi",
+    "url": "https://github.com/Wenaixi/mai-planner-timer-scheduler"
+  },
   "license": "AGPL-v3.0-or-later",
   "urls": {
     "repository": "https://github.com/clfr41/mai-timefree",
