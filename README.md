@@ -1,4 +1,4 @@
-# mai-timefree
+# wenaixi_mai_planner_timer_scheduler
 
 > 本插件由 [Wenaixi](https://github.com/Wenaixi) 维护，是专为生产环境深度调优的高可用分支。
 
@@ -6,7 +6,7 @@
 
 为麦麦 Planner 规划器提供相对/绝对定时调度与定时提醒能力。
 
-- **插件目录**：`mai-timefree`
+- **插件目录**：`wenaixi_mai_planner_timer_scheduler`
 - **生效版本**：`v0.1.0`
 - **开源许可证**：`MIT`
 
@@ -38,6 +38,6 @@
 ## 上游项目与开源溯源
 
 - **原作者 / 组织**：`Mai-with-u 社区`
-- **官方原版开源仓库**：[https://github.com/Mai-with-u/mai-timefree](https://github.com/Mai-with-u/mai-timefree)
+- **官方原版开源仓库**：[https://github.com/Mai-with-u/wenaixi_mai_planner_timer_scheduler](https://github.com/Mai-with-u/wenaixi_mai_planner_timer_scheduler)
 - **开源协议**：`MIT`
 - **声明**：本项目遵循开源协议，特此致敬原作者的杰出贡献。本分支针对生产环境的高并发网络、个性化社交和抗风控需求进行了深度稳定性修复与定制化演进。
