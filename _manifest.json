@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "id": "wenaixi.mai_planner_timer_scheduler",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "name": "麦麦规划器延时提醒备忘闹钟",
   "description": "为 planner 提供定时调度能力，支持 relative/absolute/interval/chain 四种模式，多级触发前判定（冷却/活跃/频控），所有行为可配置(无限麦麦)。",
   "author": {
@@ -10,10 +10,10 @@
   },
   "license": "AGPL-v3.0-or-later",
   "urls": {
-    "repository": "https://github.com/clfr41/mai-timefree",
-    "homepage": "https://github.com/clfr41/mai-timefree",
-    "documentation": "https://github.com/clfr41/mai-timefree",
-    "issues": "https://github.com/clfr41/mai-timefree/issues"
+    "repository": "https://github.com/Wenaixi/mai-planner-timer-scheduler",
+    "homepage": "https://github.com/Wenaixi/mai-planner-timer-scheduler#readme",
+    "documentation": "https://github.com/Wenaixi/mai-planner-timer-scheduler/blob/main/README.md",
+    "issues": "https://github.com/Wenaixi/mai-planner-timer-scheduler/issues"
   },
   "host_application": {
     "min_version": "1.0.0",
